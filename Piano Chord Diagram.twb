@@ -1,0 +1,810 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20193.19.0821.2225                               -->
+<workbook original-version='18.1' source-build='2019.3.0 (20193.19.0821.2225)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts ignorable='true' predowngraded='true' />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Basic Notes (Chord_Chart_Source)' inline='true' name='federated.1w5i4io13zk25i1694zk21bf7u2w' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Chord_Chart_Source' name='excel-direct.1qjks5u00t01jm1fza0xl1fs3uod'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Drew/Box/Data Analysis/Chord Diagram Tableau/Chord_Chart_Source.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation join='left' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[Chords].[Note]' />
+              <expression op='[Basic Notes].[Note]' />
+            </expression>
+          </clause>
+          <relation connection='excel-direct.1qjks5u00t01jm1fza0xl1fs3uod' name='Chords' table='[Chords$]' type='table'>
+            <columns gridOrigin='A1:G43:no:A1:G43:0' header='yes' outcome='2'>
+              <column datatype='string' name='Chord' ordinal='0' />
+              <column datatype='string' name='Maj/Min' ordinal='1' />
+              <column datatype='integer' name='7' ordinal='2' />
+              <column datatype='string' name='Aug' ordinal='3' />
+              <column datatype='string' name='Dim' ordinal='4' />
+              <column datatype='string' name='Note' ordinal='5' />
+              <column datatype='integer' name='Finger' ordinal='6' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1qjks5u00t01jm1fza0xl1fs3uod' name='Basic Notes' table='[&apos;Basic Notes$&apos;]' type='table'>
+            <columns gridOrigin='A1:C33:no:A1:C33:0' header='yes' outcome='2'>
+              <column datatype='string' name='Note' ordinal='0' />
+              <column datatype='integer' name='X' ordinal='1' />
+              <column datatype='integer' name='Y' ordinal='2' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[7]' value='[Chords].[7]' />
+          <map key='[Aug]' value='[Chords].[Aug]' />
+          <map key='[Chord]' value='[Chords].[Chord]' />
+          <map key='[Dim]' value='[Chords].[Dim]' />
+          <map key='[Finger]' value='[Chords].[Finger]' />
+          <map key='[Maj/Min]' value='[Chords].[Maj/Min]' />
+          <map key='[Note (Basic Notes)]' value='[Basic Notes].[Note]' />
+          <map key='[Note]' value='[Chords].[Note]' />
+          <map key='[X]' value='[Basic Notes].[X]' />
+          <map key='[Y]' value='[Basic Notes].[Y]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Chord</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Chord]</local-name>
+            <parent-name>[Chords]</parent-name>
+            <remote-alias>Chord</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Maj/Min</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Maj/Min]</local-name>
+            <parent-name>[Chords]</parent-name>
+            <remote-alias>Maj/Min</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>7</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[7]</local-name>
+            <parent-name>[Chords]</parent-name>
+            <remote-alias>7</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Aug</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Aug]</local-name>
+            <parent-name>[Chords]</parent-name>
+            <remote-alias>Aug</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Dim</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Dim]</local-name>
+            <parent-name>[Chords]</parent-name>
+            <remote-alias>Dim</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Note</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Note]</local-name>
+            <parent-name>[Chords]</parent-name>
+            <remote-alias>Note</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Finger</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Finger]</local-name>
+            <parent-name>[Chords]</parent-name>
+            <remote-alias>Finger</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Chords]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:G43:no:A1:G43:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Note</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Note (Basic Notes)]</local-name>
+            <parent-name>[Basic Notes]</parent-name>
+            <remote-alias>Note</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>X</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[X]</local-name>
+            <parent-name>[Basic Notes]</parent-name>
+            <remote-alias>X</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Y</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Y]</local-name>
+            <parent-name>[Basic Notes]</parent-name>
+            <remote-alias>Y</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Basic Notes]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C33:no:A1:C33:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='Sum' datatype='integer' name='[7]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='integer' name='[Finger]' role='dimension' type='ordinal' />
+      <column caption='Note1' datatype='string' name='[Note]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='integer' name='[X]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Y]' role='measure' type='quantitative' />
+      <mapped-images>
+        <mapped-image caption='Piano_BG' expression='file:///C:/Users/Drew/Box/Data Analysis/Chord Diagram Tableau/Piano_BG.png' name='[MappedImage1]'>
+          <mapping bottom='0' left='0' right='508' top='114' x='[X]' y='[Y]' />
+          <image-options show-entire-image='true' />
+        </mapped-image>
+      </mapped-images>
+      <layout dim-ordering='alphabetic' dim-percentage='0.562897' measure-ordering='alphabetic' measure-percentage='0.437103' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Piano Chords'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Basic Notes (Chord_Chart_Source)' name='federated.1w5i4io13zk25i1694zk21bf7u2w' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1w5i4io13zk25i1694zk21bf7u2w'>
+            <column datatype='string' name='[Chord]' role='dimension' type='nominal' />
+            <column aggregation='Sum' datatype='integer' name='[Finger]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[Maj/Min]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[X]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Y]' role='measure' type='quantitative' />
+            <column-instance column='[Chord]' derivation='None' name='[none:Chord:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Finger]' derivation='None' name='[none:Finger:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Maj/Min]' derivation='None' name='[none:Maj/Min:nk]' pivot='key' type='nominal' />
+            <column-instance column='[X]' derivation='Sum' name='[sum:X:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Y]' derivation='Sum' name='[sum:Y:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1w5i4io13zk25i1694zk21bf7u2w].[none:Chord:nk]'>
+            <groupfilter function='member' level='[none:Chord:nk]' member='&quot;A&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1w5i4io13zk25i1694zk21bf7u2w].[none:Maj/Min:nk]'>
+            <groupfilter function='member' level='[none:Maj/Min:nk]' member='&quot;Maj&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1w5i4io13zk25i1694zk21bf7u2w].[none:Chord:nk]</column>
+            <column>[federated.1w5i4io13zk25i1694zk21bf7u2w].[none:Maj/Min:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1w5i4io13zk25i1694zk21bf7u2w].[sum:Y:qk]' field-type='quantitative' max='114' min='0' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.1w5i4io13zk25i1694zk21bf7u2w].[sum:X:qk]' field-type='quantitative' max='509' min='-1' range-type='fixed' scope='cols' type='space' />
+            <format attr='display' class='0' field='[federated.1w5i4io13zk25i1694zk21bf7u2w].[sum:Y:qk]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.1w5i4io13zk25i1694zk21bf7u2w].[sum:X:qk]' scope='cols' value='false' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.1w5i4io13zk25i1694zk21bf7u2w].[none:Finger:ok]' />
+              <lod column='[federated.1w5i4io13zk25i1694zk21bf7u2w].[none:Finger:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='color' value='#e6e6e6' />
+                <format attr='font-weight' value='bold' />
+                <format attr='font-size' value='14' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='3.922652006149292' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='shape' value=':filled/circle' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1w5i4io13zk25i1694zk21bf7u2w].[sum:Y:qk]</rows>
+        <cols>[federated.1w5i4io13zk25i1694zk21bf7u2w].[sum:X:qk]</cols>
+        <mark-labels>
+          <mark-label id='19'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1w5i4io13zk25i1694zk21bf7u2w].[sum:X:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1w5i4io13zk25i1694zk21bf7u2w].[sum:Y:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1w5i4io13zk25i1694zk21bf7u2w].[none:Finger:ok]</field>
+                  <field>[federated.1w5i4io13zk25i1694zk21bf7u2w].[sum:X:qk]</field>
+                  <field>[federated.1w5i4io13zk25i1694zk21bf7u2w].[sum:Y:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1</value>
+                <value>200</value>
+                <value>19</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='0.475' y='0.461538' />
+          </mark-label>
+          <mark-label id='20'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1w5i4io13zk25i1694zk21bf7u2w].[sum:X:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1w5i4io13zk25i1694zk21bf7u2w].[sum:Y:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1w5i4io13zk25i1694zk21bf7u2w].[none:Finger:ok]</field>
+                  <field>[federated.1w5i4io13zk25i1694zk21bf7u2w].[sum:X:qk]</field>
+                  <field>[federated.1w5i4io13zk25i1694zk21bf7u2w].[sum:Y:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>3</value>
+                <value>254</value>
+                <value>19</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='0.475' y='0.5' />
+          </mark-label>
+          <mark-label id='21'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1w5i4io13zk25i1694zk21bf7u2w].[sum:X:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1w5i4io13zk25i1694zk21bf7u2w].[sum:Y:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1w5i4io13zk25i1694zk21bf7u2w].[none:Finger:ok]</field>
+                  <field>[federated.1w5i4io13zk25i1694zk21bf7u2w].[sum:X:qk]</field>
+                  <field>[federated.1w5i4io13zk25i1694zk21bf7u2w].[sum:Y:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>5</value>
+                <value>308</value>
+                <value>19</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='0.512195' y='0.536585' />
+          </mark-label>
+        </mark-labels>
+        <tooltip-style tooltip-mode='none' />
+      </table>
+      <simple-id uuid='{919C7885-8F6F-4677-8716-33A4C9E2D2C6}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Chord Chart'>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='Basic Notes (Chord_Chart_Source)' name='federated.1w5i4io13zk25i1694zk21bf7u2w' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1w5i4io13zk25i1694zk21bf7u2w'>
+        <column datatype='string' name='[Chord]' role='dimension' type='nominal' />
+        <column datatype='string' name='[Maj/Min]' role='dimension' type='nominal' />
+        <column-instance column='[Chord]' derivation='None' name='[none:Chord:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Maj/Min]' derivation='None' name='[none:Maj/Min:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98230' id='7' param='horz' type='layout-flow' w='99064' x='468' y='885'>
+            <zone h='98230' id='5' type='layout-basic' w='89702' x='468' y='885'>
+              <zone h='98230' id='3' name='Piano Chords' w='89702' x='468' y='885'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98230' id='6' is-fixed='true' param='vert' type='layout-flow' w='9362' x='90170' y='885'>
+              <zone h='18252' id='8' mode='radiolist' name='Piano Chords' param='[federated.1w5i4io13zk25i1694zk21bf7u2w].[none:Chord:nk]' show-all='false' type='filter' w='9362' x='90170' y='885'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='7743' id='9' mode='radiolist' name='Piano Chords' param='[federated.1w5i4io13zk25i1694zk21bf7u2w].[none:Maj/Min:nk]' show-all='false' type='filter' w='9362' x='90170' y='19137'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='14' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98230' id='15' param='vert' type='layout-flow' w='99064' x='468' y='885'>
+                <zone h='18252' id='8' mode='dropdown' name='Piano Chords' param='[federated.1w5i4io13zk25i1694zk21bf7u2w].[none:Chord:nk]' show-all='false' type='filter' w='9362' x='90170' y='885'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7743' id='9' mode='dropdown' name='Piano Chords' param='[federated.1w5i4io13zk25i1694zk21bf7u2w].[none:Maj/Min:nk]' show-all='false' type='filter' w='9362' x='90170' y='19137'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='98230' id='3' is-fixed='true' name='Piano Chords' w='89702' x='468' y='885'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{43D28030-A5FC-44A3-AFFB-CE0F8CF40C25}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='37'>
+    <window class='dashboard' maximized='true' name='Chord Chart'>
+      <viewpoints>
+        <viewpoint name='Piano Chords'>
+          <zoom type='entire-view' />
+          <floating-toolbar-visibility value='2' />
+        </viewpoint>
+      </viewpoints>
+      <active id='8' />
+      <simple-id uuid='{EDC45F62-95D6-4BA2-8E63-B690B20C90EF}' />
+    </window>
+    <window class='worksheet' name='Piano Chords'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='radiolist' param='[federated.1w5i4io13zk25i1694zk21bf7u2w].[none:Chord:nk]' show-all='false' type='filter' />
+            <card mode='radiolist' param='[federated.1w5i4io13zk25i1694zk21bf7u2w].[none:Maj/Min:nk]' show-all='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1w5i4io13zk25i1694zk21bf7u2w].[none:Chord:nk]</field>
+            <field>[federated.1w5i4io13zk25i1694zk21bf7u2w].[none:Finger:ok]</field>
+            <field>[federated.1w5i4io13zk25i1694zk21bf7u2w].[none:Maj/Min:nk]</field>
+            <field>[federated.1w5i4io13zk25i1694zk21bf7u2w].[none:Note:nk]</field>
+          </color-one-way>
+        </highlight>
+        <floating-toolbar-visibility value='2' />
+      </viewpoint>
+      <simple-id uuid='{CFDD7AEF-0BF5-4284-BA04-A5DA9CB09921}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Chord Chart' width='192'>
+      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
+      AQip5v8Bl6uOkk/AFykAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Piano Chords' width='192'>
+      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
+      cjeN4QAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
