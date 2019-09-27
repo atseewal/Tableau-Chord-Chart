@@ -9,6 +9,7 @@ I was originally looking at mapping floorplans in Tableau, but came up with this
 * Joining data in Tableau
 * Custom mappings in Tableau
 * Adding marks and text to worksheets
+* Using parameters/views
 
 ## Future Improvements
 * Adding more variations of notes
