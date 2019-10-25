@@ -452,8 +452,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='37' type='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97970' id='38' param='vert' type='layout-flow' w='98124' x='938' y='1015'>
+            <zone h='100000' id='39' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97970' id='40' param='vert' type='layout-flow' w='98124' x='938' y='1015'>
                 <zone h='20939' id='8' mode='dropdown' name='Piano Chords' param='[federated.1w5i4io13zk25i1694zk21bf7u2w].[none:Chord:nk]' show-all='false' type='filter' w='18757' x='80305' y='1015'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -515,7 +515,7 @@
           <floating-toolbar-visibility value='2' />
         </viewpoint>
       </viewpoints>
-      <active id='9' />
+      <active id='-1' />
       <simple-id uuid='{EDC45F62-95D6-4BA2-8E63-B690B20C90EF}' />
     </window>
     <window class='worksheet' hidden='true' name='Piano Chords'>
