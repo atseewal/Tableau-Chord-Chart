@@ -1,4 +1,4 @@
-# Tableau-Chord-Chart
+# [Tableau Chord Chart](https://public.tableau.com/profile/drew.seewald#!/vizhome/ChordChart_15719682895050/ChordChart "Chord Chart")
 Chord chart for various instruments in Tableau
 
 ## Motivation
