@@ -1,4 +1,4 @@
-# Tableau-Chord-Chart
+# [Tableau Chord Chart](https://public.tableau.com/views/ChordChart_15719682895050/ChordChart?:embed=y&:display_count=yes&:origin=viz_share_link "Chord Chart")
 Chord chart for various instruments in Tableau
 
 ## Motivation
